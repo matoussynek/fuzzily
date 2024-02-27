@@ -1,0 +1,65 @@
+{
+  "name": "fuzzily",
+  "displayName": "fuzzily",
+  "description": "Fuzzy-finder similar to zoxide",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "properties": {
+        "fuzzily.resultLimit": {
+          "type": "number",
+          "default": "20",
+          "description": "The maximum number of results to display"
+        },
+        "fuzzily.debounceTime": {
+          "type": "number",
+          "default": "250",
+          "description": "The time to wait after the last keypress before searching (in milliseconds)"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "fuzzily.fzf",
+        "title": "fuzzily: File Finder"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "fuzzily.fzf",
+        "key": "ctrl+shift+z",
+        "mac": "cmd+shift+z"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^18.19.18",
+    "@types/vscode": "^1.86.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "isbinaryfile": "^5.0.2"
+  }
+}
