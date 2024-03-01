@@ -11,7 +11,7 @@ Example file structure:
 
 <img src="fuzzily.png" width="320"/>
 
-You can use *fuzzily* like a normal file finder and search for `file.txt` however many results would come up and in now way it makes the life easier.
+You can use *fuzzily* like a normal file finder and search for `file.txt` however many results would come up and in no way it makes the life easier.
 
 The true power of *fuzzily* comes when you are searching for a specific file and you roughly know the path to it.
 
