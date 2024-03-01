@@ -1,6 +1,6 @@
 # fuzzily
 
-An easy-to-use file fuzzy finder for vscode that works better the default file finder for navigating file structures with repeating file names. (at least for me it does)
+An easy-to-use file fuzzy finder for vscode that works better than the default file finder for navigating file structures with repeating file names. (at least for me it does)
 
 ## How to use
 
