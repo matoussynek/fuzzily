@@ -1,71 +1,39 @@
-# fuzzily README
+# fuzzily
 
-This is the README for your extension "fuzzily". After writing up a brief description, we recommend including the following sections.
+An easy-to-use file fuzzy finder for vscode that works better the default file finder for navigating file structures with repeating file names. (at least for me it does)
 
-## Features
+## How to use
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+fuzzily add a keyboard shortcut `ctrl + shift + z` (or `cmd + shift + z` for those with lack of taste).
+Alternatively use the comamnd pallete and search for *fuzzily: File Finder*
 
-For example if there is an image subfolder under your extension project workspace:
+Example file structure:
 
-\!\[feature X\]\(images/feature-x.png\)
+<img src="fuzzily.png" width="320"/>
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+You can use *fuzzily* like a normal file finder and search for `file.txt` however many results would come up and in now way it makes the life easier.
 
-## Requirements
+The true power of *fuzzily* comes when you are searching for a specific file and you roughly know the path to it.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Examples
+* when searching for `A/file.txt` the prompt should be ``a file`` (note that this tool is case insensitive and also matches results on substrings - no need to include the filename with extension and `Another/file.txt` is also included in the results)
+* when searching for `B/D/file.txt` the prompt to return only that file is ``b d f``. The prompt ``d f`` returns `B/D/file.txt` and `C/D/file.txt`
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+* `fuzzily.resultLimit`: Sets max number of displayed results. (default: 20)
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release of of *fuzzily*
 
 ---
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
 ## For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+* [GitHub](https://github.com/matoussynek/fuzzily)
 
 **Enjoy!**

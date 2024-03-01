@@ -7,7 +7,6 @@ import { QuickPickItem, window, workspace } from 'vscode';
 
 const CONFIG = vscode.workspace.getConfiguration();
 const LIMIT = CONFIG.get<number>("fuzzily.resultLimit");
-const DEBOUNCE = CONFIG.get<number>("fuzzily.debounceTime");
 
 const cwd = workspace.workspaceFolders?.[0].uri.fsPath;
 if (!cwd) {
@@ -16,10 +15,6 @@ if (!cwd) {
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "fuzzily" is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
@@ -54,7 +49,6 @@ async function findItems(query: string) {
 		return caseInsensitive;
 	});
 	var searchQuery = "**/**" + queryParts.join("**/**/**") + "**";
-	console.log("Searching for", searchQuery);
 	const results = (await vscode.workspace.findFiles(searchQuery, `**/node_modules/**`, LIMIT)).map(uri => vscode.workspace.asRelativePath(uri));
 	
 	// If results are empty, show a message and return
