@@ -1,7 +1,9 @@
 {
   "name": "fuzzily",
-  "displayName": "fuzzily",
-  "description": "Fuzzy-finder similar to zoxide",
+  "displayName": "fuzzily - file finder",
+  "description": "File fuzzy-finder similar to zoxide",
+  "publisher": "matoussynek",
+  "repository": "https://github.com/matoussynek/fuzzily",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.86.0"
