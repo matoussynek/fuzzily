@@ -13,10 +13,16 @@ Example file structure:
 
 You can use *fuzzily* like a normal file finder and search for `file.txt` however many results would come up and in no way it makes the life easier.
 
-The true power of *fuzzily* comes when you are searching for a specific file and you roughly know the path to it.
+The true power of *fuzzily* comes when you are searching for a specific file and you roughly know the path to it. In addition to searching for a filename (or a substring of it) it is possible to specify one or more directories (or a substring of its name) on a path to that file. This can come in handy when there are multiple files with same filename across a workspace.
+
+### Syntax
+* The directories are specified from **left to right** (as in a normal filepath) and are separated by a **space** eg. ``B E file.txt``, ``C D file.txt``
+* The last part of the prompt MUST refere to a filename
+* Substrings can be used eg. instead of ``Another file.txt`` you can use ``An f``, ``no txt``, ``r f``, etc...
+* The prompts are **case insensitive**
 
 ### Examples
-* when searching for `A/file.txt` the prompt should be ``a file`` (note that this tool is case insensitive and also matches results on substrings - no need to include the filename with extension and `Another/file.txt` is also included in the results)
+* when searching for `A/file.txt` the prompt could be ``a file`` (`Another/file.txt` is also included in the results)
 * when searching for `B/D/file.txt` the prompt to return only that file is ``b d f``. The prompt ``d f`` returns `B/D/file.txt` and `C/D/file.txt`
 
 ## Extension Settings
@@ -27,9 +33,13 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release of of *fuzzily*
+
+### 0.0.2
+
+Readme/usecases update
 
 ---
 ## For more information
